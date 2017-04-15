@@ -107,8 +107,23 @@ class ViewController: UIViewController {
         so1 = Double(s1)!
         lblKQ.text = String (so1 / 100)        //gan dau
     }
-    
-    
+    @IBAction func btnAmDuong(_ sender: Any) {
+        let s1:String = lblKQ.text!
+        so1 = Double(s1)!
+        let i:Int = 1
+        repeat
+        {
+            if (Double(i) == 1)
+            {
+                lblKQ.text = String(so1)
+            }
+            else
+            {
+                lblKQ.text = String("-" + String(so1))
+            }
+            lblKQ.text = String(so1)
+        } while i <= 2
+    }
     
     @IBAction func btnBang(_ sender: Any) {
         let s2:String = lblKQ.text!
